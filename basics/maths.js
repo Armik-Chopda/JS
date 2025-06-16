@@ -1,3 +1,8 @@
+
+
+                                    // Math Library
+
+                                    
 console.log(Math.abs(-4))
 console.log(Math.abs(4))
 console.log(Math.round(2.3))
@@ -9,6 +14,7 @@ console.log(Math.min(1,4,2,4,2,7,8,9))
 
 
 // console.log((Math.random()*10).toPrecision(1))
+
 
 const min=0
 const max=20
