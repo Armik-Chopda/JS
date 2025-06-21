@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+        
+    </ul>
+    <input type="button" value="addtext" onclick="addTag('python')">
+        
+        <input type="button" value="remove" onclick="remove2()">
+
+    <script>
+        
+        function addTag(language){
+            const addEle=document.createElement('li');
+            addEle.setAttribute('id', 'newTag');
+            addEle.setAttribute('class', 'newClass');
+            
+            addEle.appendChild(document.createTextNode(language))
+            // document.body.appendChild(addEle)
+            const mainUl=document.querySelector('.language').appendChild(addEle)
+            // mainUl.appendChild(addEle)
+
+        }
+        //edit
+        const firstLan=document.querySelector('li:first-child')
+        const newLi=document.createElement('li')
+        newLi.textContent='Node.js'
+        firstLan.replaceWith(newLi)
+
+        //edit
+        const newOne=document.querySelector('li')
+        //newOne.outerHTML='<li>JavaScript</li>'
+
+        function remove2(){
+            // const remove1=document.querySelector('li:last-child')
+            const remove1 = document.querySelector('li:first-child');
+            remove1.remove()
+        }
+        
+    </script>
+</body>
+</html>
