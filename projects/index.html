@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Scheme Switcher</title>
+  <style>
+    .cenvas {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    span.button {
+      margin-left: 1rem;
+      padding: 2rem;
+      border: 3px solid black;
+      height: 5rem;
+      width: 5rem;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    #Red {
+      background-color:bisque;
+    }
+    #Black {
+      background-color:brown;
+    }
+    #Blue {
+      background-color:cadetblue;
+    }
+    #White {
+      background-color: white;
+      border: 3px solid gray;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Color Scheme Switcher</h1>
+  <div class="cenvas">
+    <span class="button" id="Red"></span>
+    <span class="button" id="Black"></span>
+    <span class="button" id="Blue"></span>
+    <span class="button" id="White"></span>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
