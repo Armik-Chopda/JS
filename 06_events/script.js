@@ -10,6 +10,13 @@
 //     e.preventDefault()
 // })
 
+
+
+
+
+// type, timestamp, defaultPrevented
+// target, toElement, srcElement, currentTarget,
+
 document.getElementById('images').addEventListener('click',function(event){
     event.stopPropagation();
     event.preventDefault()
