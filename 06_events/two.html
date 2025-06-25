@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Armik
+        
+       </h1>
+       <button id="stop" >Stop</button>
+       <button id="start">start</button>
+       <script>
+        const stout=function(){
+            console.log('Armik')
+            document.querySelector('h1').innerHTML='Armik Chopda'
+        }
+
+        const chengeMe=setTimeout(stout,2000)
+        const stop1=document.querySelector('#stop')
+        stop1.addEventListener('click',function(){
+            console.log('Stoped')
+            clearTimeout(chengeMe)
+        })
+        const start=document.querySelector('#start')
+        start.addEventListener('click',function(){
+            console.log('start')
+            setTimeout(stout,2000)
+    
+        })
+       </script>
+</body>
+</html>

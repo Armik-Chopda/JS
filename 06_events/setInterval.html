@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button id="stop" >Stop</button>
+    <button id="start">start</button>
+
+    <script>
+        const stop1=document.getElementById('stop')
+        const start=document.getElementById('start')
+        const f1=function(){
+            const date=new Date()
+            console.log('Hy',date.getSeconds())
+        }
+        start.addEventListener('click',function(){
+            
+            const nit= setInterval(f1,1000)
+            return nit
+            stop1.addEventListener('click',function(){
+            clearInterval(nit)
+        })
+        })
+    
+        
+        
+    
+
+    </script>
+</body>
+</html>
