@@ -10,7 +10,7 @@
   flex-direction: column;   /* Column layout */
   align-items: center;      /* Center horizontally */
   justify-content: center;  /* Center vertically if needed */
-  height: 30rem;
+  height: 50rem;
   width: 40rem;
   background-color: antiquewhite;
   padding: 1rem;
@@ -50,13 +50,18 @@
 <body>
     <div class="abc">
   <div class="main">
-    <h1 class="name">Header</h1>
+    <h1 class="name"></h1>
   <div class="images">
-    <!-- Put your actual images or content here -->
-    <img src="your-image.jpg" alt="…" />
+   
+
+   
   </div>
   </div>
+   <p class="pera"></p>
+   
 </div>
+<button class="btn">View Profile</button>
+
 
     
 
@@ -64,6 +69,8 @@
 
     <script>
        const apiLink=' https://api.github.com/users/Armik-Chopda';
+       const pera=document.querySelector('.pera')
+       const btn=document.querySelector('.btn')
        const xhr=new XMLHttpRequest();
        xhr.open('GET',apiLink)
        xhr.send()
@@ -72,19 +79,27 @@
         console.log(xhr.readyState)
         if (xhr.readyState===4) {
             const data=JSON.parse(this.responseText)
-            const imga=document.querySelector('.images')
+            
+            
+            btn.addEventListener('click',function(){
+              const imga=document.querySelector('.images')
             const name=document.querySelector('.name')
              name.innerHTML=`<h3>${data.name}</h3>`
             imga.innerHTML=`
             
             <img src="${data.avatar_url}" alt="" id='profile'>
-            
-            
-            
-             
+
             `
+              
+              pera.innerHTML+=`Location: ${data.location}<br>
+             public repository: ${data.public_repos}<br>
+             <a href="${'https://github.com/Armik-Chopda'}">github profile</a>
             
+            `
+              
+            })
             
+       
         }
        }
        
