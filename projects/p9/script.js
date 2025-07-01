@@ -1,0 +1,26 @@
+const API_KEY='df220fa15fa3716015173b254bc426f0'
+// const URL=' const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;'
+const cityName=document.querySelector('#cityInput');
+const temp=document.querySelector('#temperature')
+const btn=document.querySelector('#searchBtn')
+btn.addEventListener('click', function(e) {
+    if (cityName.value.trim() !== '') {
+        const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value.trim()}&appid=${API_KEY}&units=metric`;
+
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(data => {
+                if(data.main) {
+                    temp.innerHTML = `Temperature: ${data.main.temp} °C`;
+                } else {
+                    temp.innerHTML = `City not found`;
+                }
+            })
+            .catch(error => {
+                console.log('Error fetching weather data:', error);
+                temp.innerHTML = `Error fetching weather data`;
+            });
+    } else {
+        temp.innerHTML = `Please enter a city name`;
+    }
+});
