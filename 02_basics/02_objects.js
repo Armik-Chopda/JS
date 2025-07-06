@@ -6,7 +6,7 @@ faceBookUser.age=19;
 faceBookUser.isLoggedIn=true
 // console.log(faceBookUser)
 
-const newObject={                           // use mutipal key inside the key or funcrions also
+const newObject={                           // use mutipal key inside the key or function also
     email:'armik@gmail.com',
     id:'001',
     fullName:{

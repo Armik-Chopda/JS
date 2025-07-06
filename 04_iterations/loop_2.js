@@ -8,7 +8,7 @@
 
 const arr=[1,2,3,4,5,6,7,8,9]
 for (const i of arr) {
-    // console.log(i);
+    console.log(i);
     
     
 }
@@ -16,7 +16,7 @@ for (const i of arr) {
 
 const str='armik chopda'
 for(const i of str){
-    // console.log(i);
+    console.log(i);
     
 }
 

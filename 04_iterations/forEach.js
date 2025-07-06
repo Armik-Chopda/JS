@@ -11,7 +11,7 @@ function print(i){
 }
 myArray.forEach(print)//print is function referance 
 myArray.forEach((item,index,myArray)=>{
-   // console.log(item,index,myArray);
+   console.log(item,index,myArray);
     
 })
 //forEach loop in array with more than one objects

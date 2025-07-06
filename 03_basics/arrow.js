@@ -15,7 +15,7 @@ function this1(){
 this1()
 
 const newFunc=()=>{
-    console.log(this);// in arroe function this keyword return {} empty object
+    console.log(this);// in arrow function .......this..... keyword return {} empty object
     
 }
 newFunc()
